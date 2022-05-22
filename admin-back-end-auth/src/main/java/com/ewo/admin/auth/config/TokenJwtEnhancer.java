@@ -11,9 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author TAO
- * @description: 给生成的jwt签名中添加自定义数据
- * @date 2020/12/12 0:20
+ * 给生成的jwt签名中添加自定义数据
+ * @author wangruiheng
  */
 @Slf4j
 public class TokenJwtEnhancer implements TokenEnhancer {

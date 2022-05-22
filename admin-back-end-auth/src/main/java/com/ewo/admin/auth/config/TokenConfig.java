@@ -1,8 +1,4 @@
-package com.ewo.admin.auth.config;/*
- * @description: Token相关配置
- * @author TAO
- * @date 2020/12/1 21:13
- */
+package com.ewo.admin.auth.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +8,10 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
+
+/**
+ * @author wangruiheng
+ */
 @Configuration
 public class TokenConfig {
 
