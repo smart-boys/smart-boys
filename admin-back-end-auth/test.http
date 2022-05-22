@@ -1,0 +1,11 @@
+#获取token
+POST http://localhost:8080/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic web-client secret
+
+grant_type=password&username=user&password=12345678
+
+###测试toke
+POST http://localhost:8080/hello HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTMyMDg1NTYsInVzZXJfbmFtZSI6InVzZXIiLCJqdGkiOiJjM2Y2ZDgxMy1lOTk4LTQ0YTQtYjZkOS0zZDNjOWIxOGUzOWMiLCJjbGllbnRfaWQiOiJ3ZWItY2xpZW50Iiwic2NvcGUiOlsidG9kby5yZWFkIiwidG9kby53cml0ZSJdfQ.-e5PK3qTx2hCz1BO7NTPdE1met13MeGom9V1izHPvOw
