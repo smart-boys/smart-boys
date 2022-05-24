@@ -1,7 +1,6 @@
 package com.ewo.admin.service;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.ewo.admin.mapper.SbMenuMapper;
 import com.ewo.admin.mapper.SbUserOauthMapper;
 import com.ewo.admin.model.SbUserOauth;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +18,6 @@ import org.springframework.stereotype.Service;
 public class SbUserOauthServiceImpl implements UserDetailsService {
 
     private final SbUserOauthMapper sbUserOauthMapper;
-    private final SbMenuMapper sbMenuMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -27,7 +25,7 @@ public class SbUserOauthServiceImpl implements UserDetailsService {
         if(sbUsers==null){
             throw new UsernameNotFoundException("Cannot find username");
         }
-        sbUsers.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(sbMenuMapper.getMenuCodeByUserId(sbUsers.getUserId())));
+        sbUsers.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(sbUserOauthMapper.getMenuCodeByUserId(sbUsers.getUserId())));
         return sbUsers;
     }
 }

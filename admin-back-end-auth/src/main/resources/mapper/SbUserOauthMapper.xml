@@ -2,4 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ewo.admin.mapper.SbUserOauthMapper">
 
+    <select id="getMenuCodeByUserId" resultType="java.lang.String">
+        select GROUP_CONCAT(sm.code) from sb_menu sm
+        inner join sb_role_menu  srm on srm.menu_id = sm.id
+        inner join sb_user  sb on sb.role_id = srm.role_id
+        where sb.id = #{userId}
+    </select>
 </mapper>

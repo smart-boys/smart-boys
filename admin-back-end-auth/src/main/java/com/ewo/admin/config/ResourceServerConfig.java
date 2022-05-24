@@ -5,7 +5,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
 /**
- * 配置为
+ * 配置为资源服务器
  * @author wangruiheng
  */
 @EnableResourceServer
