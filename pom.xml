@@ -28,6 +28,7 @@
         <hutool-all.version>5.8.0</hutool-all.version>
         <security.oauth2.version>2.5.0.RELEASE</security.oauth2.version>
         <security.oauth2.autoconfigure.version>2.6.7</security.oauth2.autoconfigure.version>
+        <springfox-swagger2.version>3.0.0</springfox-swagger2.version>
     </properties>
 
     <dependencyManagement>
@@ -80,6 +81,21 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${security.oauth2.autoconfigure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${security.oauth2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

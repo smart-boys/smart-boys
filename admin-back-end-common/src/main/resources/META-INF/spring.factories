@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.hutool.extra.spring.SpringUtil,\
+  com.ewo.admin.properties.SecurityPermitAllProperties
